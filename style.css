@@ -7,6 +7,85 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-/* Add styles here! */
+:root {
+  --color-green: hsl(160deg, 100%, 30%);
+  --color-gold-light: hsl(45deg, 100%, 50%);
+  --color-gold-dark: hsl(45deg, 100%, 40%);
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-grey-700: hsl(0deg, 0%, 10%);
+  --color-grey-500: hsl(0deg, 0%, 30%);
+  --color-grey-300: hsl(0deg, 0%, 40%);
+  --color-grey-100: hsl(0deg, 0%, 60%);
+  --color-white: hsl(0deg, 0%, 100%);
+}
+
+header, main {
+  height: 50%;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px;
+}
+
+header {
+  border-bottom: 5px inset var(--color-grey-300);
+  margin: 0 auto;
+}
+
+section {
+  background: var(--color-grey-100);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--color-white);
+  padding: 16px;
+}
+
+.indented-heading {
+  background: var(--color-gold-light);
+  border-bottom: 5px inset var(--color-gold-dark);
+  display: inline-block;
+  margin: 0;
+  margin-left: -32px;
+  padding: 16px 24px 16px 32px;
+  font-size: 1.25em;
+  width: 60%;
+}
+.intro-chunk {
+  margin-top: 25%;
+  padding: 0 16px;
+  max-width: 60%;
+  line-height: 1.75;
+}
+
+p {
+  padding: 8px 16px;
+}
+
+strong {
+  color: var(--color-green);
+}
+
+.title {
+  margin-left: 16px;
+}
+
+@media (max-width: 500px) {
+  .indented-heading {
+    margin-left: 0;
+    width: 100%;
+  }
+  .intro-chunk {
+    max-width: 100%;
+
+  }
+  .max-width-wrapper {
+    padding: 64px 0;
+  }
+}
